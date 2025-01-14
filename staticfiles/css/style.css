@@ -1,0 +1,84 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+swiper-container {
+  width: 100% !important;
+  height: 100vh !important; /* Use viewport height for full-screen slider */
+  position: relative !important;
+  margin: 0 auto !important;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+swiper-slide img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 800px !important;
+  object-fit: contain !important;
+  object-position: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  z-index: 100;
+}
+
+.next {
+  right: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  swiper-container {
+    height: auto !important; /* Allow the container to adjust based on the image */
+  }
+
+  swiper-slide {
+    height: auto !important; /* Allow the slide to adjust based on the image */
+  }
+
+  swiper-slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100vh !important; /* Ensure the image fits within the viewport height */
+    object-fit: contain !important; /* Ensure the entire image is visible */
+  }
+
+  /* Adjust navigation arrows for mobile */
+  .prev,
+  .next {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 18px !important;
+  }
+}
