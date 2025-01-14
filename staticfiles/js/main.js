@@ -1,10 +1,9 @@
 // Initialize Swiper
-const swiperEl = document.querySelector('.swiper-container');
+const swiperEl = document.querySelector('swiper-container');
 
 // Swiper parameters
-const swiperParams = {
+const params = {
   slidesPerView: 1,
-  spaceBetween: 30,
   loop: true,
   autoplay: {
     delay: 3000,
@@ -14,32 +13,21 @@ const swiperParams = {
     clickable: true,
   },
   navigation: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      spaceBetween: 10
     },
-    // when window width is >= 480px
     480: {
       slidesPerView: 1,
-      spaceBetween: 20
     },
-    // when window width is >= 640px
-    640: {
+    768: {
       slidesPerView: 1,
-      spaceBetween: 30
     }
   }
 };
 
 // Assign it to Swiper element
-Object.assign(swiperEl, swiperParams);
+Object.assign(swiperEl, params);
 
 // Initialize Swiper
 swiperEl.initialize();

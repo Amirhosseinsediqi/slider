@@ -1,84 +1,47 @@
-html,
-body {
-  position: relative;
-  height: 100%;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
+  background: #fff;
 }
 
 swiper-container {
-  width: 100% !important;
-  height: 100vh !important; /* Use viewport height for full-screen slider */
-  position: relative !important;
-  margin: 0 auto !important;
+  width: 100%;
+  height: 100%;
 }
 
 swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 swiper-slide img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 800px !important;
-  object-fit: contain !important;
-  object-position: center;
+  width: 2740px;
+  height: 800px;
+  object-fit: cover;
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  z-index: 100;
-}
-
-.next {
-  right: 0;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  swiper-container {
-    height: auto !important; /* Allow the container to adjust based on the image */
-  }
-
-  swiper-slide {
-    height: auto !important; /* Allow the slide to adjust based on the image */
-  }
-
+/* Mobile Styles */
+@media (max-width: 768px) {
   swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 100vh !important; /* Ensure the image fits within the viewport height */
-    object-fit: contain !important; /* Ensure the entire image is visible */
+    width: 100%;
+    height: auto;
+    max-height: 800px;
   }
+}
 
-  /* Adjust navigation arrows for mobile */
-  .prev,
-  .next {
-    width: 30px !important;
-    height: 30px !important;
-    font-size: 18px !important;
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  swiper-container {
+    height: auto;
+  }
+  
+  swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
   }
 }
